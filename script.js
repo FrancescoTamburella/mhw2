@@ -16,7 +16,7 @@ bottone.addEventListener('click', resetQuiz)
 let contatore = 0;
 
 function selectAnswer(event) {
-    event.currentTarget.querySelector('.checkbox').src = "checked.png"
+    event.currentTarget.querySelector('.checkbox').src = "images/checked.png"
     event.currentTarget.classList.add("selected")
     event.currentTarget.classList.remove("unselected")
     const selectedAnswer = event.currentTarget.dataset.choiceId
@@ -26,7 +26,7 @@ function selectAnswer(event) {
         if (otherAnswer.dataset.choiceId !== selectedAnswer) {
             otherAnswer.classList.add("unselected")
             otherAnswer.classList.remove("selected")
-            otherAnswer.querySelector('.checkbox').src = "unchecked.png"
+            otherAnswer.querySelector('.checkbox').src = "images/unchecked.png"
 
         }
     }
@@ -83,7 +83,7 @@ function resetQuiz() {
         answer.addEventListener("click", selectAnswer)
         answer.classList.remove("selected")
         answer.classList.remove("unselected")
-        answer.querySelector(".checkbox").src = "unchecked.png"
+        answer.querySelector(".checkbox").src = "images/unchecked.png"
     }
     results.classList.add("hidden")
     contatore = 0;
